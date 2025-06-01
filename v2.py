@@ -27,7 +27,6 @@ user_agents = []
 
 def optimize_system():
     try:
-        os.system("echo 1 > /proc/sys/net/ipv4/tcp_tw_reuse")
         resource.setrlimit(resource.RLIMIT_NOFILE, (999999, 999999))
     except:
         console.print("[yellow]⚠️ Couldn't optimize system limits[/]")
